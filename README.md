@@ -50,7 +50,8 @@ Alternatively, see the GitHub documentation on [creating a pull request].
 
 Thanks to the following people who have contributed to this project:
 
-- [@Talha-74] 📖
+- !Talha-74 📖
+
 - [@contributor2] 🐛
 - [@contributor3] 🎨
 
