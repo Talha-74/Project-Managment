@@ -34,3 +34,30 @@ To install Project, follow these steps:
 Linux and macOS:
 
 
+## Contributing
+
+To contribute to Project, follow these steps:
+
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<commit_message>'`
+4. Push to the original branch: `git push origin <project_name>/<location>`
+5. Create the pull request.
+
+Alternatively, see the GitHub documentation on [creating a pull request].
+
+## Contributors
+
+Thanks to the following people who have contributed to this project:
+
+- [@Talha-74] 📖
+- [@contributor2] 🐛
+- [@contributor3] 🎨
+
+## Contact
+
+If you want to contact me you can reach me at <talhashinwari7474@gmail.com>.
+
+
+
+
