@@ -1,18 +1,13 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+</a></p>
 <p align="center">
   <a href="https://reactjs.org" target="_blank">
-    <img src="https://icons8.com/icons/set/react-logo" width="400" alt="React Logo">
+   <img src="https://skillicons.dev/icons?i=git" width="100" />
+       <img src="https://skillicons.dev/icons?i=react" width="100" />
+       <img src="https://skillicons.dev/icons?i=php" width="100" />
   </a>
 </p>
-
-<p align="center">
-  <a href="https://inertiajs.com" target="_blank">
-    <img src="https://icons8.com/icons/set/inertia-js" width="400" alt="Inertia.js Logo">
-  </a>
-</p>
-
-
-
 
 # Project Managment App
 
