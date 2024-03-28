@@ -46,15 +46,6 @@ To contribute to Project, follow these steps:
 
 Alternatively, see the GitHub documentation on [creating a pull request].
 
-## Contributors
-
-Thanks to the following people who have contributed to this project:
-
-- !Talha-74 📖
-
-- [@contributor2] 🐛
-- [@contributor3] 🎨
-
 ## Contact
 
 If you want to contact me you can reach me at <talhashinwari7474@gmail.com>.
