@@ -27,6 +27,10 @@ Before you begin, ensure you have met the following requirements:
 - Laravel 11
 - npm or yarn
 
+## Project Blog
+1. Install Breeze
+   composer require laravel/breeze --dev
+
 ## Installation
 
 To install Project, follow these steps:
