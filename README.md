@@ -28,17 +28,39 @@ Before you begin, ensure you have met the following requirements:
 - npm or yarn
 
 ## Project Blog
-- Install Breeze
+
+### Introduction
+This README provides a comprehensive overview of the Laravel React Inertia project, outlining its setup and key features. Below, you'll find step-by-step instructions along with code snippets to guide you through the project's development.
+
+### Installation
+To get started, follow these steps to install Laravel Breeze and set up the project environment:
+
+1. Install Laravel Breeze:
+   ```bash
    composer require laravel/breeze --dev
+2. Run Breeze Installation:
+   ```bash
    php artisan breeze:install
-   chosse react, darkmode and hit enter.
-2. to enable dark mode
-resource >> ap.blade.php
-`<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">`
-3. Verify Email
-In user mode add this
+3. Choose React and Dark Mode options during installation.
+
+### Enabling Dark Mode
+To enable Dark Mode in your project, follow these steps:
+
+1. Open resources/layouts/app.blade.php.
+2. Add the dark class to the HTML tag:
+   ```bash
+   <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+3. open tailwind.config file and add this:
+   ```bash
+   export default {
+    darkMode: 'class',
+
+   
+### Email Verification
+To enable email verification for users, follow these steps:
+Implement the `MustVerifyEmail` interface in the User model.
 `Implements MustVerifyEmail`
-be default if env is not setup the email will be received in Storage >> laravel.log with a link to confirm email and get to dashboard.
+by default if env is not setup the email will be received in Storage >> laravel.log with a link to confirm email and get to dashboard.
 
 
 ## Installation
