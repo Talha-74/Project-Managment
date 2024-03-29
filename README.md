@@ -9,7 +9,7 @@
   </a>
 </p>
 
-# Project Managment App
+# Project Management App
 
 Loading...
 
@@ -28,8 +28,18 @@ Before you begin, ensure you have met the following requirements:
 - npm or yarn
 
 ## Project Blog
-1. Install Breeze
+- Install Breeze
    composer require laravel/breeze --dev
+   php artisan breeze:install
+   chosse react, darkmode and hit enter.
+2. to enable dark mode
+resource >> ap.blade.php
+`<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">`
+3. Verify Email
+In user mode add this
+`Implements MustVerifyEmail`
+be default if env is not setup the email will be received in Storage >> laravel.log with a link to confirm email and get to dashboard.
+
 
 ## Installation
 
