@@ -34,7 +34,6 @@ This README provides a comprehensive overview of the Laravel React Inertia proje
 
 ### Installation
 To get started, follow these steps to install Laravel Breeze and set up the project environment:
-
 1. Install Laravel Breeze:
    ```bash
    composer require laravel/breeze --dev
@@ -45,7 +44,6 @@ To get started, follow these steps to install Laravel Breeze and set up the proj
 
 ### Enabling Dark Mode
 To enable Dark Mode in your project, follow these steps:
-
 1. Open resources/layouts/app.blade.php.
 2. Add the dark class to the HTML tag:
    ```bash
@@ -54,14 +52,18 @@ To enable Dark Mode in your project, follow these steps:
    ```bash
    export default {
     darkMode: 'class',
-
    
 ### Email Verification
-To enable email verification for users, follow these steps:
-Implement the `MustVerifyEmail` interface in the User model.
-`Implements MustVerifyEmail`
-by default if env is not setup the email will be received in Storage >> laravel.log with a link to confirm email and get to dashboard.
+- To enable email verification for users, follow these steps:
+- `Implements MustVerifyEmail` interface in the User model. 
+If the `.env` file is not configured for email, verification links will be logged to `storage/logs/laravel.log`. Users can use this link to confirm their email and access the dashboard.
 
+## Development
+### Prepare Database
+1. Create migrations, projects, tasks along with its controllers and models.
+2. establish projects has many tasks relationship.
+3. create factories for projects and tasks.
+4. seed them in database seeder.
 
 ## Installation
 
