@@ -17,7 +17,7 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'          => fake()->sentence(),
+            ‘name’          => fake()->words(3, true),
             'description'   => fake()->realText(),
             'due_date'      => fake()->dateTimeBetween('now', '+1 year'),
             'status'        => fake()->randomElement(['pending', 'in_progress', 'completed']),
