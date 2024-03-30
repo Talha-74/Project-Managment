@@ -27,7 +27,7 @@ Before you begin, ensure you have met the following requirements:
 - Laravel 11
 - npm or yarn
 
-## Project Blog
+# Project Blog
 
 ### Introduction
 This README provides a comprehensive overview of the Laravel React Inertia project, outlining its setup and key features. Below, you'll find step-by-step instructions along with code snippets to guide you through the project's development.
@@ -58,12 +58,37 @@ To enable Dark Mode in your project, follow these steps:
 - `Implements MustVerifyEmail` interface in the User model. 
 If the `.env` file is not configured for email, verification links will be logged to `storage/logs/laravel.log`. Users can use this link to confirm their email and access the dashboard.
 
-## Development
-### Prepare Database
-1. Create migrations, projects, tasks along with its controllers and models.
+# Development
+- #### Prepare Database
+1. Create migrations, projects, tasks.
 2. establish projects has many tasks relationship.
 3. create factories for projects and tasks.
 4. seed them in database seeder.
+- #### Create Controllers and define routes
+1. ` php artisan make:controller ProjectController --model=Project --requests --resource`
+2. `$ php artisan make:controller TaskController --model=Task --requests --resource`
+3. `$ php artisan make:controller UserController --model=User --requests --resource`
+4. Remove the welcome and login routes and redirect to dashboard on `/`
+   ```bash
+   Route::redirect('/', '/dashboard');
+5. Dashboard route in middleware and using arrow function
+   ```bash
+   Route::middleware(['auth', 'verified'])->group(function() {
+    Route::get('/dashboard', fn () => Inertia::render('Dashboard')) ->name('dashboard'); });
+6. Resource routes for all three controllers
+     ```bash
+    Route::resource('project', ProjectController::class);
+    Route::resource('task', TaskController::class);
+    Route::resource('user', UserController::class);
+7. In .editorconfig file, make the identation_size 2
+   ```bash
+   [*.{js, jsx}]
+   indent_size = 2
+8. Highlight the active navbar or route
+   ```bash
+   <NavLink href={route("dashboard")} active={route().current("dashboard")} >
+    Dashboard
+   </NavLink>
 
 ## Installation
 
