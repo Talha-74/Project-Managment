@@ -13,7 +13,7 @@ export default function Index({ auth, projects, queryParams = null, success }) {
         } else {
             delete queryParams[name];
         }
-        router.get(route("projects.index"), queryParams);
+        router.get(route("project.index"), queryParams);
     };
 
     const onKeyPress = (name, e) => {
@@ -60,17 +60,17 @@ export default function Index({ auth, projects, queryParams = null, success }) {
                                                 className="w-full"
                                                 defaultValue={queryParams.name}
                                                 placeholder="Project Name"
-                                                onBlur={(e) =>
+                                                onBlur={e =>
                                                     searchFieldChanged("name", e.target.value)
                                                 }
-                                                onKeyPress={(e) => onKeyPress("name", e)}
+                                                onKeyPress={e => onKeyPress("name", e)}
                                             />
                                         </th>
                                         <th className="px-3 py-3">
                                             <SelectInput
                                                 className="w-full"
                                                 defaultValue={queryParams.status}
-                                                onChange={(e) =>
+                                                onChange={e =>
                                                     searchFieldChanged("status", e.target.value)
                                                 }
                                             >
