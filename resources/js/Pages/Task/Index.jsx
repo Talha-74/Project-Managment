@@ -6,7 +6,7 @@ import { TASK_STATUS_CLASS_MAP, TASK_STATUS_TEXT_MAP } from "@/constants";
 import { Head, Link, router } from "@inertiajs/react";
 import TableHeading from "@/Components/TableHeading";
 
-export default function Index({ auth, projects, queryParams = null, success }) {
+export default function Index({ auth, tasks, queryParams = null, success }) {
     queryParams = queryParams || {};
     const searchFieldChanged = (name, value) => {
         if (value) {
@@ -58,50 +58,50 @@ export default function Index({ auth, projects, queryParams = null, success }) {
                                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border-b-2 border-gray-500">
                                         <tr className="text-nowrap">
-                                           <TableHeading
-                                           name="id"
-                                            sort_field={queryParams.sort_field}
-                                            sort_direction={queryParams.sort_direction}
-                                            sortChanged={sortChanged}>
-                                                 ID
-                                           </TableHeading>
+                                            <TableHeading
+                                                name="id"
+                                                sort_field={queryParams.sort_field}
+                                                sort_direction={queryParams.sort_direction}
+                                                sortChanged={sortChanged}>
+                                                ID
+                                            </TableHeading>
                                             <th className="px-3 py-2">Image</th>
                                             <th onClick={e => sortChanged('name')}>
                                                 <div className="px-3 py-2 flex items-center justify-between gap-1 cursor-pointer">
-                                                Name
-                                                <div>
-                                                    <ChevronUpIcon className="w-4" />
-                                                    <ChevronDownIcon className="w-4 -mt-2" />
+                                                    Name
+                                                    <div>
+                                                        {/* <ChevronUpIcon className="w-4" /> */}
+                                                        {/* <ChevronDownIcon className="w-4 -mt-2" /> */}
+                                                    </div>
                                                 </div>
-                                                </div>
-                                                </th>
+                                            </th>
                                             <th onClick={e => sortChanged('status')} >
                                                 <div className="px-3 py-2 flex items-center justify-between gap-1 cursor-pointer">
-                                                Status
-                                                <div>
-                                                    <ChevronUpIcon className="w-4" />
-                                                    <ChevronDownIcon className="w-4 -mt-2" />
+                                                    Status
+                                                    <div>
+                                                        {/* <ChevronUpIcon className="w-4" /> */}
+                                                        {/* <ChevronDownIcon className="w-4 -mt-2" /> */}
+                                                    </div>
                                                 </div>
-                                                </div>
-                                                </th>
+                                            </th>
                                             <th onClick={e => sortChanged('created_at')} >
                                                 <div className="px-3 py-2 flex items-center justify-between gap-1 cursor-pointer">
-                                                Create Date
-                                                <div>
-                                                    <ChevronUpIcon className="w-4" />
-                                                    <ChevronDownIcon className="w-4 -mt-2" />
+                                                    Create Date
+                                                    <div>
+                                                        {/* <ChevronUpIcon className="w-4" /> */}
+                                                        {/* <ChevronDownIcon className="w-4 -mt-2" /> */}
+                                                    </div>
                                                 </div>
-                                                </div>
-                                                </th>
+                                            </th>
                                             <th onClick={e => sortChanged('due_date')} >
                                                 <div className="px-3 py-2 flex items-center justify-between gap-1 cursor-pointer">
-                                                Due Date
-                                                <div>
-                                                    <ChevronUpIcon className="w-4" />
-                                                    <ChevronDownIcon className="w-4 -mt-2" />
+                                                    Due Date
+                                                    <div>
+                                                        {/* <ChevronUpIcon className="w-4" />
+                                                        <ChevronDownIcon className="w-4 -mt-2" /> */}
+                                                    </div>
                                                 </div>
-                                                </div>
-                                                </th>
+                                            </th>
                                             <th className="px-3 py-2">Created by</th>
                                             <th className="px-3 py-2">Actions</th>
                                         </tr>
@@ -142,7 +142,7 @@ export default function Index({ auth, projects, queryParams = null, success }) {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {projects.data.map((task) => (
+                                        {tasks.data.map((task) => (
                                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                                 <td className="px-3 py-3">{task.id}</td>
                                                 <td className="px-3 py-3">
@@ -170,7 +170,7 @@ export default function Index({ auth, projects, queryParams = null, success }) {
                                     </tbody>
                                 </table>
                             </div>
-                            <Pagination links={projects.meta.links} />
+                            <Pagination links={tasks.meta.links} />
                         </div>
                     </div>
                 </div>
